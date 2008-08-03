@@ -1,0 +1,3 @@
+deb http://update.eeepc.asus.com/1.6 common main
+deb http://update.eeepc.asus.com/1.6 p1000 main
+deb http://update.eeepc.asus.com/1.6 en main

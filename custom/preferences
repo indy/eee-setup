@@ -1,0 +1,32 @@
+Package: *
+Pin: origin update.eeepc.asus.com
+Pin-Priority: 950
+
+Package: *
+Pin: origin
+Pin-Priority: 925
+
+Package: *
+Pin: origin xnv4.xandros.com
+Pin-Priority: 900
+
+Package: *
+Pin: origin dccamirror.xandros.com
+Pin-Priority: 850
+
+Package: *
+Pin: origin www.geekconnection.org
+Pin-Priority: 750
+
+Package: *
+Pin: release a=stable
+Pin-Priority: 700
+
+Package: *
+Pin: release a=testing
+Pin-Priority: 650
+
+Package: *
+Pin: release a=unstable
+Pin-Priority: 600
+
