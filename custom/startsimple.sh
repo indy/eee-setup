@@ -13,4 +13,5 @@ xmodmap -e "keycode 66 = Control_L"
 xmodmap -e "keycode 37 = Control_L"
 xmodmap -e "add Control = Control_L"
 [ -f /usr/bin/dispwatch ] && /usr/bin/dispwatch &
+display -window root /home/user/work/eee-wallpaper/vivacalaca-asus.png
 exec dwm
