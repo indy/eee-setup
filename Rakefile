@@ -2,7 +2,7 @@
 desc "default repositories"
 task :default_repos do
   %x{sudo cp original/sources.list /etc/apt/sources.list}
-  %x{sudo rm /etc/apt/preferences}
+  %x{sudo rm /etc/apt/preferences} if (File.exists?("/etc/apt/preferences"))
 end
 
 desc "custom repositories"
@@ -18,15 +18,19 @@ task :default_startup do
   %x{sudo cp original/fastservices /etc/fastservices}
   %x{sudo cp original/fastshutdown.sh /sbin/fastshutdown.sh}
   %x{sudo cp original/fastreboot.sh /sbin/fastreboot.sh}
+  %x{sudo cp original/hosts /etc/hosts}
+  %x{sudo cp original/hostname /etc/hostname}
 end
 
 desc "custom startup"
 task :custom_startup do
   %x{sudo cp custom/services.sh /usr/sbin/services.sh}
   %x{sudo cp custom/startsimple.sh /usr/bin/startsimple.sh}
-  %x{sudo rm /etc/fastservices}
+  %x{sudo rm /etc/fastservices} if (File.exists?("/etc/fastservices"))
   %x{sudo cp custom/fastshutdown.sh /sbin/fastshutdown.sh}
   %x{sudo cp custom/fastreboot.sh /sbin/fastreboot.sh}
+  %x{sudo cp custom/hosts /etc/hosts}
+  %x{sudo cp custom/hostname /etc/hostname}
 end
 
 desc "my setup"
