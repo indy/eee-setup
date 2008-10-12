@@ -20,6 +20,8 @@ task :default_startup do
   %x{sudo cp original/fastreboot.sh /sbin/fastreboot.sh}
   %x{sudo cp original/hosts /etc/hosts}
   %x{sudo cp original/hostname /etc/hostname}
+
+  %x{sudo cp original/fstab /etc/fstab}
 end
 
 desc "custom startup"
@@ -31,6 +33,8 @@ task :custom_startup do
   %x{sudo cp custom/fastreboot.sh /sbin/fastreboot.sh}
   %x{sudo cp custom/hosts /etc/hosts}
   %x{sudo cp custom/hostname /etc/hostname}
+
+  %x{sudo cp custom/fstab /etc/fstab}
 end
 
 desc "my setup"

@@ -9,11 +9,11 @@ status bar background: 451503
 /* appearance */
 static const char font[]            = "-*-terminus-medium-r-normal-*-14-*-*-*-*-*-*-*";
 static const char normbordercolor[] = "#111111";
-static const char normbgcolor[]     = "#000000"; // "#696969";
+static const char normbgcolor[]     = "#000000";
 static const char normfgcolor[]     = "#4f1305";
-static const char selbordercolor[]  = "#c38a1f"; /* "#ff7f24"; */
-static const char selbgcolor[]      = "#4f1305"; //"#333333";
-static const char selfgcolor[]      = "#c38a1f"; //"#a2cd5a";
+static const char selbordercolor[]  = "#c38a1f";
+static const char selbgcolor[]      = "#4f1305";
+static const char selfgcolor[]      = "#c38a1f";
 static uint borderpx                = 1;        /* border pixel of windows */
 static uint snap                    = 32;       /* snap pixel */
 static Bool showbar                 = True;     /* False means no bar */
@@ -29,8 +29,8 @@ static const char tags[][MAXTAGLEN] = { "1", "2", "3", "4", "5", "6", "7", "8", 
 static Rule rules[] = {
   /* class      instance    title       tags mask     isfloating */
   { "Gimp",     NULL,       NULL,       0,            True },
-  { "Firefox",  NULL,       NULL,       1 << 2,       True },
-  { "Emacs",    NULL,       NULL,       1 << 1,       False },
+  { "Firefox",  NULL,       NULL,       1 << 1,       True },
+  { "Emacs",    NULL,       NULL,       1 << 0,       False },
 };
 
 /* layout(s) */
@@ -58,6 +58,7 @@ static Layout layouts[] = {
 /* commands */
 static const char *dmenucmd[] = { "dmenu_run", "-fn", font, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
 static const char *termcmd[]  = { "uxterm", NULL };
+static const char *tabtermcmd[]  = { "urxvt", NULL };
 static const char *firefoxcmd[] = { "firefox", NULL };
 static const char *emacscmd[] = { "emacs", NULL };
 
@@ -65,7 +66,7 @@ static const char *emacscmd[] = { "emacs", NULL };
 static Key keys[] = {
   /* modifier                     key        function        argument */
   { MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
-  { MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
+  { MODKEY|ShiftMask,             XK_Return, spawn,          {.v = tabtermcmd } },
   { MODKEY,                       XK_e,      spawn,          {.v = emacscmd } },
   { MODKEY,                       XK_f,      spawn,          {.v = firefoxcmd } },
   { MODKEY,                       XK_b,      togglebar,      {0} },
