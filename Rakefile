@@ -22,6 +22,7 @@ task :default_startup do
   %x{sudo cp original/hostname /etc/hostname}
 
   %x{sudo cp original/fstab /etc/fstab}
+  %x{sudo cp original/_bash_profile /home/user/.bash_profile}
 end
 
 desc "custom startup"
@@ -35,6 +36,7 @@ task :custom_startup do
   %x{sudo cp custom/hostname /etc/hostname}
 
   %x{sudo cp custom/fstab /etc/fstab}
+  %x{sudo cp custom/_bash_profile /home/user/.bash_profile}
 end
 
 desc "my setup"

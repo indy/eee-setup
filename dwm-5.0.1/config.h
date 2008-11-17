@@ -56,16 +56,20 @@ static Layout layouts[] = {
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
 /* commands */
-static const char *dmenucmd[] = { "dmenu_run", "-fn", font, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
+
+
+static const char *dmenuoftencmd[] = { "dmenu-often.sh", NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-fn", font, "-nb", normbgcolor, "-nf", selfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
 static const char *termcmd[]  = { "uxterm", NULL };
 static const char *tabtermcmd[]  = { "urxvt", NULL };
-static const char *firefoxcmd[] = { "firefox", NULL };
+static const char *firefoxcmd[] = { "firefox3e", NULL };
 static const char *emacscmd[] = { "emacs", NULL };
 
 
 static Key keys[] = {
   /* modifier                     key        function        argument */
   { MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
+  { MODKEY,                       XK_o,      spawn,          {.v = dmenuoftencmd } },
   { MODKEY|ShiftMask,             XK_Return, spawn,          {.v = tabtermcmd } },
   { MODKEY,                       XK_e,      spawn,          {.v = emacscmd } },
   { MODKEY,                       XK_f,      spawn,          {.v = firefoxcmd } },
