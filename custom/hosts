@@ -1,3 +1,10 @@
-192.168.0.3	red	red	# lan4
-127.0.0.1	indy-local.localdomain indy-local.io
-127.0.0.1	localhost.localdomain	localhost
+0.0.0.0 reddit.com
+0.0.0.0 news.ycombinator.com
+0.0.0.0 digg.com
+0.0.0.0 slashdot.org
+0.0.0.0 theregister.co.uk
+0.0.0.0 techcrunch.com
+0.0.0.0 eurogamer.net
+192.168.0.3 red red # lan4
+127.0.0.1 indy-local.localdomain indy-local.io
+127.0.0.1 localhost.localdomain localhost
