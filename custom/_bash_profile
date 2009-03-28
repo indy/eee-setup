@@ -15,12 +15,17 @@ if [ -d ~/bin ] ; then
     PATH=~/bin:"${PATH}"
 fi
 
-
+# a bunch of stuff for Java
 JAVA_HOME=/usr/lib/jvm/java-1.5.0-sun
 export JAVA_HOME
-ANT_HOME=/home/user/lang/java/apache-ant-1.7.1
+ANT_HOME=/home/user/libs/java/apache-ant-1.7.1
 export ANT_HOME
+LD_LIBRARY_PATH=/home/user/libs/java/jogl-1.1.2-pre-20080523-linux-i586/lib
+export LD_LIBRARY_PATH
 
-PATH=/home/user/lang/java/apache-ant-1.7.1/bin:/home/user/lang/java/apache-maven-2.0.9/bin:"${PATH}"
-
+PATH=/home/user/libs/java/apache-ant-1.7.1/bin:/home/user/libs/java/apache-maven-2.0.9/bin:"${PATH}"
 export PATH
+
+
+. clearclasspath
+. buildclasspath

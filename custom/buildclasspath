@@ -1,0 +1,8 @@
+#!/bin/sh -e
+
+for i in `ls $HOME/libs/java/jars/*.jar`
+do
+  CLASSPATH=${CLASSPATH}:${i}
+done
+
+export CLASSPATH

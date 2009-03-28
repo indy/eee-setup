@@ -39,6 +39,19 @@ task :custom_startup do
 
   %x{sudo cp custom/fstab /etc/fstab}
   %x{sudo cp custom/_bash_profile /home/user/.bash_profile}
+
+  %x{cp custom/isg-synaptic /home/user/bin/isg-synaptic}
+  %x{cp custom/isg-shutdown /home/user/bin/isg-shutdown}
+  %x{cp custom/isg-reboot /home/user/bin/isg-reboot}
+  %x{cp custom/isg-network /home/user/bin/isg-network}
+  %x{cp custom/isg-filemanager /home/user/bin/isg-filemanager}
+  %x{cp custom/isg-am /home/user/bin/isg-am}
+  %x{cp custom/clojure-update-all /home/user/bin/clojure-update-all}
+  %x{cp custom/clojure /home/user/bin/clojure}
+  %x{cp custom/clj /home/user/bin/clj}
+  %x{cp custom/clearclasspath /home/user/bin/clearclasspath}
+  %x{cp custom/buildclasspath /home/user/bin/buildclasspath}
+
 end
 
 desc "my setup"

@@ -1,0 +1,10 @@
+## updates all code related to clojure
+cd /home/user/code/clojure
+svn update
+ant
+cd /home/user/libs/emacs/swank-clojure
+git pull
+cd /home/user/libs/emacs/slime
+git pull
+cd /home/user/libs/emacs/clojure-mode
+git pull

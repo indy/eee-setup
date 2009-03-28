@@ -1,0 +1,11 @@
+#!/bin/bash
+JLINE_DIR=/usr/share/java/
+JLINE_JAR=$JLINE_DIR/jline.jar
+CLOJURE_DIR=/home/user/code/clojure
+CLOJURE_JAR=$CLOJURE_DIR/clojure.jar
+
+if [ -z "$1" ]; then
+    java jline.ConsoleRunner clojure.lang.Repl
+else
+    java clojure.lang.Script $1
+fi
