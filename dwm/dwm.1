@@ -20,13 +20,13 @@ Windows are grouped by tags. Each window can be tagged with one or multiple
 tags. Selecting certain tags displays all windows with these tags.
 .P
 dwm contains a small status bar which displays all available tags, the layout,
-the title of the focused window, and the text read from standard input. A
-floating window is indicated with an empty square and a maximised
-floating window is indicated with a filled square before the windows
-title.  The selected tags are indicated with a different color. The tags of
-the focused window are indicated with a filled square in the top left
-corner.  The tags which are applied to one or more windows are indicated
-with an empty square in the top left corner.
+the title of the focused window, and the text read from the root window name
+property. A floating window is indicated with an empty square and a maximised
+floating window is indicated with a filled square before the windows title.
+The selected tags are indicated with a different color. The tags of the focused
+window are indicated with a filled square in the top left corner.  The tags
+which are applied to one or more windows are indicated with an empty square in
+the top left corner.
 .P
 dwm draws a small border around windows to indicate the focus state.
 .SH OPTIONS
@@ -60,8 +60,17 @@ Start
 .B Mod1\-b
 Toggles bar on and off.
 .TP
+.B Mod1\-t
+Sets tiled layout.
+.TP
+.B Mod1\-f
+Sets floating layout.
+.TP
+.B Mod1\-m
+Sets monocle layout.
+.TP
 .B Mod1\-space
-Toggles between layouts.
+Toggles between current and previous layout.
 .TP
 .B Mod1\-j
 Focus next window.
@@ -74,9 +83,6 @@ Decrease master area size.
 .TP
 .B Mod1\-l
 Increase master area size.
-.TP
-.B Mod1\-m
-Toggle between maximisation meta-layout and active layout.
 .TP
 .B Mod1\-Return
 Zooms/cycles focused window to/from master area (tiled layouts only).
